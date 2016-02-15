@@ -71,34 +71,3 @@ if __name__=='__main__':
     engine = sqlalchemy.create_engine('mysql+pymysql://' + user + ':' + password + '@' + host + '/' + db_name)
     read_process_insert_data_file(filename,db_name,table_name,engine,locations)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-

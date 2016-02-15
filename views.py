@@ -11,7 +11,6 @@ import ConfigParser
 import osmnx_utils as ou
 import utils
 
-    
 config = utils.get_config('config.ini')    
 default_center = '37.77709, -122.44623'
 default_start = 'Palace of Fine Arts, San Francisco, CA'
@@ -126,7 +125,7 @@ def output():
                            pdistance=str.format('{0:.2f}',pdistance),
                            sdistance=str.format('{0:.2f}',sdistance))
 
-@retry(stop_max_attempt_number=10)                            
+@retry(stop_max_attempt_number=10)
 def process_input(start,end):
     start_loc = geocoder.google(start)
     end_loc = geocoder.google(end)
@@ -178,6 +177,3 @@ def get_photos_along_path(path,num_points):
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
     #app.run(host='0.0.0.0', port=80, debug=False)
-
-        
-

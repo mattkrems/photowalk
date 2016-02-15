@@ -307,10 +307,4 @@ def remove_extra_keys_from_edges(sg):
     for n0,n1 in sg.edges_iter():
         remove = set(sg[n0][n1].keys()) - set(keep)
         for key in remove:
-            del sg[n0][n1][key]    
-        
-    
-        
-
-
-
+            del sg[n0][n1][key]

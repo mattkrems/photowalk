@@ -52,6 +52,3 @@ if __name__=='__main__':
             con.commit()
         except flickrapi.exceptions.FlickrError:
             continue
-    
-    
-    
